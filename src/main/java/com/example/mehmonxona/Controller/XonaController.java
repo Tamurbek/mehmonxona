@@ -28,7 +28,7 @@ public class XonaController {
             xona1.setXonalariSoni(xona.getXonalariSoni());
             xona1.setHotels(optional.get());
             xonaRepository.save(xona1);
-            return "Xona ma`lumotlari joylandi";
+            return "Xona ma`lumotlari joylandi"
         }
         return "Bunday xona mavjud";
     }
