@@ -10,5 +10,5 @@ public class XonaDTO {
     private Integer xonaId;
     private int qavat;
     private int xonalariSoni;
-    private Integer hotelId;
+    private Integer hotelsId;
 }
