@@ -20,7 +20,7 @@ public class XonaController {
     HotelsRepository hotelsRepository;
     @RequestMapping
     public String set_xona(@RequestBody XonaDTO xona){
-        Optional<Hotels> optional=hotelsRepository.findById(xona.getHotelsId());
+        Optional<Hotels> optional=hotelsRepository.findById(xona.getHotelId());
         if(optional.isPresent()){
             Xona xona1=new Xona();
             xona1.setXonaId(xona.getXonaId());
@@ -28,7 +28,7 @@ public class XonaController {
             xona1.setXonalariSoni(xona.getXonalariSoni());
             xona1.setHotels(optional.get());
             xonaRepository.save(xona1);
-            return "Xona ma`lumotlari joylandi"
+            return "Xona ma`lumotlari joylandi";
         }
         return "Bunday xona mavjud";
     }
